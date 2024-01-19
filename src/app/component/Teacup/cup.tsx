@@ -1,8 +1,9 @@
 // TeaCupModel.jsx
-
+import * as THREE from 'three';
 import React, { useRef } from 'react';
 import { useGLTF } from '@react-three/drei';
 import { GLTF } from 'three';
+
 
 interface TeaCupModelProps {
   // You can define any additional props you need
@@ -10,7 +11,7 @@ interface TeaCupModelProps {
 
 const TeaCupModel: React.FC<TeaCupModelProps> = (props) => {
   const group = useRef();
-  const { nodes } = useGLTF('/path/to/your/tea-cup-model.gltf') as GLTF;
+  const { nodes } = useGLTF('/teahouse/public/giphy.gif') as GLTF;
 
   return (
     <group ref={group} {...props} dispose={null}>
